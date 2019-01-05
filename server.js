@@ -22,7 +22,6 @@ hbs.registerHelper('scream_it', (text) => {
 // custom middleware
 app.use((req, res, next) => {
     var now = new Date().toUTCString();
-    
     var log = `${now}: ${req.method} | ${req.originalUrl}`;
 
     fs.appendFile('server.log', log + '\n', (err) => {
