@@ -1,7 +1,7 @@
 const fs = require('fs');
 const express = require('express');
-const hbs = require('hbs');
 var app = express();
+const hbs = require('hbs');
 var port = 3001;
 
 // SET view engine
