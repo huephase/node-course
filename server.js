@@ -33,7 +33,7 @@ app.use((req, res, next) => {
 });
 
 // // custom middleware Sample maintainance mode. If next() is not added, it will stop and not continue executing.
-// // Enable maintainance mode by commenting and un-commenting lines below
+// // Enable maintainance mode by commenting and un-commenting lines below.
 // app.use((req, res, next) => {
 //     res.render('maintainance.hbs');
 // });
