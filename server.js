@@ -2,7 +2,7 @@ const fs = require('fs');
 const express = require('express');
 var app = express();
 const hbs = require('hbs');
-var port = 3001;
+const port = process.env.PORT || 3001; // means if 'process.env.PORT' doesnt exist, then use port 3001 instead
 
 // SET view engine
 // Also create a 'VIEWS' directory. 'VIEWS' is a default directory express looks for.
@@ -33,7 +33,7 @@ app.use((req, res, next) => {
 });
 
 // // custom middleware Sample maintainance mode. If next() is not added, it will stop and not continue executing.
-// Enable maintainance mode by commenting and un-commenting lines below
+// // Enable maintainance mode by commenting and un-commenting lines below
 // app.use((req, res, next) => {
 //     res.render('maintainance.hbs');
 // });
